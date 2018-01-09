@@ -6,7 +6,7 @@ import CarouselImage from './CarouselImage';
 import CarouselControl from './CarouselControl';
 import CarouselIndicator from './CarouselIndicator';
 
-// const VALID_CHILD_TYPES = ['CarouselItem', 'CarouselImage', 'CarouselControl', 'CarouselIndicator']
+const VALID_CHILD_TYPES_DESC = ['CarouselItem', 'CarouselImage', 'CarouselControl', 'CarouselIndicator']
 const VALID_CHILD_TYPES = [CarouselItem, CarouselImage, CarouselControl, CarouselIndicator]
 
 // based on https://getbootstrap.com/docs/4.0/components/carousel/
@@ -62,7 +62,7 @@ export default class Carousel extends PureComponent {
         slideComponents.push(child)
         slideCount++;
       } else {
-        controlComponents[child.type.name] = child;
+        controlComponents[VALID_CHILD_TYPES_DESC[VALID_CHILD_TYPES.indexOf(child.type)]] = child;
       }
     })
 
