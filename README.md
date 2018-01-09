@@ -40,6 +40,10 @@ Declarative API
 - Include Carousel.Control to display the slide control
 - Include Carousel.Indicator to display the slide indicator (with navigation)
 
+# Development
+
+`npm start`
+
 # Feature Analysis
 ## Basic
 - [x] Carousel Item
