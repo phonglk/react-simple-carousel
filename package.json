@@ -1,0 +1,36 @@
+{
+  "name": "react-simple-carousel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-transition-group": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/react-simple-carousel.git"
+  },
+  "keywords": [
+    "React",
+    "Carousel",
+    "Component",
+    "Bootstrap"
+  ],
+  "author": "Le Khoi Phong",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/phonglk/react-simple-carousel/issues"
+  },
+  "homepage": "https://github.com/phonglk/react-simple-carousel#readme",
+  "devDependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
