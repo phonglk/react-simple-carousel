@@ -24,10 +24,7 @@ export default class CarouselControl extends PureComponent {
     this.context.navigate('next');
   }
   render() {
-    const { src, enableNext, enablePrev } = this.props;
-    const style = {
-      backgroundImage: `url(${src})`,
-    }
+    const { enableNext, enablePrev } = this.props;
     const classNames = {
       arrowLeft: ['carousel-control__arrow-wrapper_left'],
       arrowRight: ['carousel-control__arrow-wrapper_right'],

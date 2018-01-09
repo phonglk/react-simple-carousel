@@ -116,8 +116,8 @@ class App extends Component {
           {['https://farm8.staticflickr.com/7794/17341634475_47d43c96c4_c.jpg',
           'https://farm4.staticflickr.com/3205/3119458059_d7438f352f_b.jpg',
           'https://farm8.staticflickr.com/7007/13555224983_11802cabdc_c.jpg']
-          .map(src => (
-            <Carousel.Item>
+          .map((src, i) => (
+            <Carousel.Item key={i}>
               <Carousel.Image src={src} />
             </Carousel.Item>
           ))}

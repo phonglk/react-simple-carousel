@@ -1,7 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-const VALID_CHILD_TYPES = ['CarouselItem', 'CarouselImage', 'CarouselControl', 'CarouselIndicator']
+import CarouselItem from './CarouselItem';
+import CarouselImage from './CarouselImage';
+import CarouselControl from './CarouselControl';
+import CarouselIndicator from './CarouselIndicator';
+
+// const VALID_CHILD_TYPES = ['CarouselItem', 'CarouselImage', 'CarouselControl', 'CarouselIndicator']
+const VALID_CHILD_TYPES = [CarouselItem, CarouselImage, CarouselControl, CarouselIndicator]
 
 // based on https://getbootstrap.com/docs/4.0/components/carousel/
 export default class Carousel extends PureComponent {
@@ -47,12 +53,12 @@ export default class Carousel extends PureComponent {
     
     // this should move to componentWillUpdate to re-run when props is changed
     React.Children.forEach(props.children, child => {
-      if(VALID_CHILD_TYPES.indexOf(child.type.name) === -1) {
+      if(VALID_CHILD_TYPES.indexOf(child.type) === -1) {
         const elementName = typeof child.type === 'string' ? child.type : child.type.name
         console.warn(`Invalid element inside carousel will be ignored: ${elementName}`);
         return;
       }
-      if (child.type.name === 'CarouselItem') {
+      if (child.type === CarouselItem) {
         slideComponents.push(child)
         slideCount++;
       } else {

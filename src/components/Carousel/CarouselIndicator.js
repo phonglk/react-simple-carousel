@@ -21,7 +21,7 @@ export default class CarouselIndicator extends PureComponent {
     this.context.navigate(i);
   }
   render() {
-    const { enabled, currentSlide, slideCount } = this.props;
+    const { currentSlide, slideCount } = this.props;
 
     const indicators = [];
     for(let i = 0; i < slideCount; i++) {
